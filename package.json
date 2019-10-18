@@ -1,0 +1,62 @@
+{
+  "name": "@warhol/comn",
+  "version": "1.0.0",
+  "description": "Commons Library of React Components",
+  "main": "src/index.ts",
+  "repository": "https://github.com/wearewarhol/comn.git",
+  "author": "Hans Christian Reinl <info@drublic.de>",
+  "license": "MIT",
+  "scripts": {
+    "build": "react-scripts build",
+    "lint": "eslint ./src/ --ext ts,tsx"
+  },
+  "dependencies": {
+    "@material-ui/styles": "^4.3.3",
+    "chroma-js": "^2.0.6",
+    "classnames": "^2.2.6",
+    "enzyme": "^3.10.0",
+    "lottie-web": "^5.5.7",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "^3.1.1",
+    "react-simple-code-editor": "^0.10.0",
+    "walls": "^2.0.7"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/enzyme": "^3.10.3",
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "jest-canvas-mock": "^2.1.1",
+    "jest-enzyme": "^7.1.0",
+    "prismjs": "^1.17.1",
+    "typescript": "~3.6.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie < 11",
+    "not op_mini all"
+  ],
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "node_modules",
+      "build"
+    ]
+  },
+  "peerDependencies": {
+    "jest": "^24.9.0"
+  }
+}
