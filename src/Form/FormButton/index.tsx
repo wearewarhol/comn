@@ -2,13 +2,13 @@ import React, { FunctionComponent } from "react";
 import Button from "../../Button";
 
 interface Props {
-  isLoading: boolean;
+  isLoading?: boolean;
   onSubmit?: (form: any) => void;
   children: any;
 }
 
 const FormButton: FunctionComponent<Props> = ({
-  isLoading,
+  isLoading = false,
   onSubmit,
   children,
 }) => (
