@@ -2,12 +2,15 @@
   "name": "@warhol/comn",
   "version": "1.0.0",
   "description": "Commons Library of React Components",
-  "main": "src/index.ts",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "types": "build/index.d.ts",
   "repository": "https://github.com/wearewarhol/comn.git",
   "author": "Hans Christian Reinl <info@drublic.de>",
   "license": "MIT",
   "scripts": {
-    "build": "react-scripts build",
+    "prepare": "yarn run build",
+    "build": "tsc -p tsconfig.json",
     "lint": "eslint ./src/ --ext ts,tsx"
   },
   "dependencies": {
@@ -19,14 +22,15 @@
     "prettier": "^1.18.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "^3.1.1",
     "react-simple-code-editor": "^0.10.0",
     "walls": "^2.0.7"
   },
   "devDependencies": {
+    "@types/chroma-js": "^1.4.3",
     "@types/classnames": "^2.2.9",
     "@types/enzyme": "^3.10.3",
     "@types/jest": "^24.0.18",
+    "@types/prismjs": "^1.16.0",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
@@ -39,6 +43,7 @@
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.9.0",
     "jest-canvas-mock": "^2.1.1",
     "jest-enzyme": "^7.1.0",
     "prismjs": "^1.17.1",
