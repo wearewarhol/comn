@@ -15,17 +15,20 @@
     "ts:build": "tsc -p tsconfig.json",
     "build": "yarn ts:build && yarn copy:css"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@material-ui/styles": "^4.3.3",
+    "jest": "^24.9.0",
+    "react-dom": "^16.9.0",
+    "react": "^16.9.0",
+    "walls": "^2.0.7"
+  },
+  "dependencies": {
     "chroma-js": "^2.0.6",
     "classnames": "^2.2.6",
     "enzyme": "^3.10.0",
     "lottie-web": "^5.5.7",
     "prettier": "^1.18.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-simple-code-editor": "^0.10.0",
-    "walls": "^2.0.7"
+    "react-simple-code-editor": "^0.10.0"
   },
   "devDependencies": {
     "@types/chroma-js": "^1.4.3",
@@ -63,8 +66,5 @@
       "node_modules",
       "build"
     ]
-  },
-  "peerDependencies": {
-    "jest": "^24.9.0"
   }
 }
