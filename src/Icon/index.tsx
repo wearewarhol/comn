@@ -82,9 +82,7 @@ const Icon: FunctionComponent<Props> = ({
   const Element: FunctionComponent<any> | null = getElement(icon);
 
   if (Element) {
-    return (
-      <Element className={classnames(classes[size], className)} />
-    );
+    return <Element className={classnames(classes[size], className)} />;
   }
 
   return Element;
