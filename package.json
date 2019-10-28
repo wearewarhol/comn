@@ -16,10 +16,10 @@
     "build": "yarn ts:build && yarn copy:css"
   },
   "peerDependencies": {
-    "@material-ui/styles": "^4.3.3",
+    "@material-ui/styles": "^4.5.0",
     "jest": "^24.9.0",
-    "react-dom": "^16.9.0",
-    "react": "^16.9.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "walls": "^2.0.7"
   },
   "dependencies": {
