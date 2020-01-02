@@ -4,6 +4,7 @@ export enum ValidatorTypes {
   LENGTH = "LENGTH",
   JSON = "JSON",
   URL = "URL",
+  VALUE = "VALUE",
 }
 
 export interface Validator {
@@ -15,7 +16,11 @@ interface LengthValidator extends Validator {
   minLength: number;
 }
 
-export type Validators = Validator | LengthValidator;
+interface ValueValidator extends Validator {
+  value: string;
+}
+
+export type Validators = Validator | LengthValidator | ValueValidator;
 
 /*
  * Validators
@@ -45,6 +50,9 @@ const urlValidator = (url: string): boolean => {
   return re.test(String(url).toLowerCase());
 };
 
+const valueValidator = (input: string, validator: ValueValidator): boolean =>
+  input !== undefined && input === validator.value;
+
 /*
  * Factory
  */
@@ -65,6 +73,8 @@ const validate = (
     return jsonValidator(input);
   } else if (type === ValidatorTypes.URL) {
     return urlValidator(input);
+  } else if (type === ValidatorTypes.VALUE) {
+    return valueValidator(input, validator);
   }
 
   return false;
