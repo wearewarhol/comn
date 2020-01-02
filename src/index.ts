@@ -1,4 +1,7 @@
-import { Validator, Validators } from "./Form/validators";
+import {
+  Validator as ImportValidator,
+  Validators as ImportValidators,
+} from "./Form/validators";
 
 export { default as Animation } from "./Animation";
 export { default as Avatar } from "./Avatar";
@@ -9,6 +12,7 @@ export { default as Divider } from "./Divider";
 
 export { default as Form } from "./Form";
 export { default as Editor } from "./Form/Editor";
+export { default as Checkbox } from "./Form/Checkbox";
 export { default as ErrorMessages } from "./Form/ErrorMessages";
 export { default as Field } from "./Form/Field";
 export { default as FormButton } from "./Form/FormButton";
@@ -32,5 +36,5 @@ export { default as Typography } from "./Typography";
 export { Breakpoints } from "./Breakpoints";
 export { State } from "./Colors";
 
-export type Validator = Validator;
-export type Validators = Validators;
+export type Validator = ImportValidator;
+export type Validators = ImportValidators;
