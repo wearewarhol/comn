@@ -50,8 +50,9 @@ const urlValidator = (url: string): boolean => {
   return re.test(String(url).toLowerCase());
 };
 
-const valueValidator = (input: string, validator: ValueValidator): boolean =>
-  input !== undefined && input === validator.value;
+const valueValidator = (input: string, validator: ValueValidator): boolean => {
+  return input !== undefined && input === validator.value;
+};
 
 /*
  * Factory

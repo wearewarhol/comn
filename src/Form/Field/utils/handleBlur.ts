@@ -5,12 +5,16 @@ interface BlurParams {
   validators?: Validators[];
   setErrors: (param: any) => void;
   onBlur?: (event: any, hasError: boolean) => void;
+  hasCheckedState: boolean;
 }
 
-const handleBlur = ({ validators, setErrors, onBlur }: BlurParams) => (
-  event: any,
-) => {
-  const { value } = event.target;
+const handleBlur = ({
+  validators,
+  setErrors,
+  onBlur,
+  hasCheckedState,
+}: BlurParams) => (event: any) => {
+  const value = hasCheckedState ? event.target.checked : event.target.value;
 
   if (validators) {
     const validatorStates = validators.map(

@@ -21,7 +21,10 @@ const ErrorMessages: FunctionComponent<Props> = ({
   return (
     <div className={classes.messages}>
       {errors.map((error) => (
-        <Typography key={error.type} className={classes.message}>
+        <Typography
+          key={`${error.type}-${error.message}`}
+          className={classes.message}
+        >
           {error.message}
         </Typography>
       ))}

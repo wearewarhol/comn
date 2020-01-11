@@ -1,12 +1,12 @@
 import classnames from "classnames";
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, ReactElement } from "react";
 import { Validators } from "../validators";
 import Field, { Size } from "../Field";
 import useStyles from "./index.styles";
 
 interface Props {
   id: string;
-  label: string;
+  label: string | ReactElement | ReactElement[];
   isDisabled?: boolean;
   value?: string;
   currentValue?: string;
@@ -58,7 +58,7 @@ const Checkbox: FunctionComponent<Props> = ({
             [classes.hasError]: shouldShowErrors && errors && errors.length > 0,
           })}
           disabled={isDisabled}
-          value={value}
+          checked={value === "on"}
           onChange={onChange}
           rows={rows}
           {...inputProps}

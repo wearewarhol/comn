@@ -1,5 +1,5 @@
 import { highlight, languages } from "prismjs";
-import "prismjs/components/prism-json";
+// import "prismjs/components/prism-json";
 import React, { FunctionComponent, useEffect, useState } from "react";
 import SimpleCodeEditor from "react-simple-code-editor";
 import classnames from "classnames";

@@ -29,12 +29,13 @@ export type RenderProps = {
 type Props = {
   className?: string;
   size?: Size;
-  label?: string;
+  label?: string | ReactElement | ReactElement[];
   id?: string;
   shouldShowErrors?: boolean;
   helpText?: string;
   validators?: Validators[];
   value?: string;
+  hasCheckedState?: boolean;
   onBlur?: (event: any, hasError: boolean) => void;
   render: (props: RenderProps) => ReactElement;
 };
@@ -54,6 +55,7 @@ const Field: FunctionComponent<Props> = ({
   value,
   onBlur,
   render,
+  hasCheckedState = false,
 }) => {
   const [currentValue, setCurrentValue] = useState<string | undefined>(value);
   const [errors, setErrors] = useState<ValidatorWithState[]>();
@@ -63,6 +65,7 @@ const Field: FunctionComponent<Props> = ({
       validators,
       setErrors,
       onBlur,
+      hasCheckedState,
     }),
     [validators, setErrors, onBlur],
   );
@@ -71,6 +74,7 @@ const Field: FunctionComponent<Props> = ({
     onBlurInternal({
       target: {
         value: currentValue,
+        checked: currentValue,
       },
     });
   }, [currentValue, onBlurInternal]);
