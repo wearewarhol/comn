@@ -16,17 +16,20 @@
     "start:dev": "yarn ts:build --watch",
     "build": "yarn ts:build && yarn copy:css"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@material-ui/styles": "4.8.2",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
     "chroma-js": "^2.1.0",
     "classnames": "^2.2.6",
-    "enzyme": "^3.11.0",
-    "lottie-web": "^5.5.10",
+    "lottie-web": "^5.6.0",
     "prettier": "^1.19.1",
-    "prismjs": "^1.17.1",
-    "react-dom": "^16.12.0",
+    "prismjs": "^1.18.0",
     "react-simple-code-editor": "^0.10.0",
-    "react": "^16.12.0",
     "walls": "^2.0.7"
   },
   "devDependencies": {
@@ -35,12 +38,11 @@
     "@types/enzyme": "^3.10.4",
     "@types/jest": "^24.0.25",
     "@types/prismjs": "^1.16.0",
-    "@types/react": "^16.9.17",
-    "@types/react-dom": "^16.9.4",
-    "@typescript-eslint/eslint-plugin": "^2.14.0",
-    "@typescript-eslint/eslint-plugin-tslint": "^2.14.0",
-    "@typescript-eslint/parser": "^2.14.0",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
     "copyfiles": "^2.1.1",
+    "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
