@@ -11,10 +11,10 @@
   "scripts": {
     "lint": "eslint ./src/ --ext ts,tsx",
     "copy:css": "copyfiles -u 1 './src/**/*.{css,svg}' build",
-    "copy:json": "copyfiles -u 1 './src/**/*.{json}' build",
+    "copy:json": "copyfiles -u 1 './src/**/*.json' build",
     "ts:build": "tsc -p tsconfig.json",
     "start:dev": "yarn ts:build --watch",
-    "build": "yarn ts:build && yarn copy:css && yarn copy:json"
+    "build": "yarn copy:css && yarn copy:json && yarn ts:build"
   },
   "peerDependencies": {
     "@material-ui/styles": "4.8.2",
