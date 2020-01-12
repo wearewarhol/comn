@@ -9,6 +9,7 @@
   "author": "Hans Christian Reinl <info@drublic.de>",
   "license": "MIT",
   "scripts": {
+    "prepare": "yarn build",
     "lint": "eslint ./src/ --ext ts,tsx",
     "copy:css": "copyfiles -u 1 './src/**/*.{css,svg}' build",
     "copy:json": "copyfiles -u 1 './src/**/*.json' build",
@@ -17,7 +18,7 @@
     "build": "yarn copy:css && yarn copy:json && yarn ts:build"
   },
   "peerDependencies": {
-    "@material-ui/styles": "4.8.2",
+    "@material-ui/styles": "^4.8.2",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "react": "^16.12.0",
