@@ -9,10 +9,10 @@ import Field from "../Field";
 import { Validators } from "../validators";
 
 type Props = {
-  id?: string;
+  id: string;
   label?: string;
   content: string;
-  onBlur?: (_: any, value: string) => void;
+  onBlur?: (_: any, hasError: boolean) => void;
   rows?: number;
   validators?: Validators[];
   shouldShowErrors?: boolean;
@@ -38,7 +38,7 @@ const Editor: FunctionComponent<Props> = ({
     <Field
       id={id}
       label={label}
-      onBlur={onBlur as any}
+      onBlur={onBlur}
       validators={validators}
       shouldShowErrors={shouldShowErrors}
       value={currentContent}
