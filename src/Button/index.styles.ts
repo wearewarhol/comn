@@ -61,6 +61,10 @@ const useStyles = makeStyles(() => ({
     marginBottom: "1rem",
   },
 
+  noGutter: {
+    marginRight: 0,
+  },
+
   icon: {
     position: "relative",
     top: "-0.1rem",

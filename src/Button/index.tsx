@@ -15,6 +15,7 @@ type Size = "small" | "medium" | "large";
 interface Props {
   icon?: ReactElement<any>;
   gutterBottom?: boolean;
+  noGutter?: boolean;
   inputProps?: any;
   onClick?: (...args: any) => void;
   variant?: Variant;
@@ -27,6 +28,7 @@ interface Props {
 const Button: FunctionComponent<Props> = ({
   icon,
   gutterBottom = false,
+  noGutter = false,
   inputProps,
   onClick,
   variant = "outlined",
@@ -60,6 +62,7 @@ const Button: FunctionComponent<Props> = ({
           [classes.small]: size === "small",
           [classes.large]: size === "large",
           [classes.isLoading]: hasBeenClicked && isLoading,
+          [classes.noGutter]: noGutter,
         })}
         onClick={(event) => {
           onClick && onClick(event);
