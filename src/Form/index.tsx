@@ -1,16 +1,16 @@
 import React, {
   useState,
   FunctionComponent,
-  Fragment,
   useEffect,
   useCallback,
 } from "react";
 
 interface Props {
+  className?: string;
   onSubmit: (form: any) => void;
 }
 
-const Form: FunctionComponent<Props> = ({ onSubmit, children }) => {
+const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
   const [hasErrors, setHasErrors] = useState<boolean>(true);
   const [shouldShowErrors, setShouldShowErrors] = useState<boolean>(false);
   const [formState, setFormState] = useState({});
@@ -59,7 +59,7 @@ const Form: FunctionComponent<Props> = ({ onSubmit, children }) => {
   }, []);
 
   return (
-    <Fragment>
+    <div className={className}>
       {React.Children.map(children, (child: any) => {
         if (!child) {
           return null;
@@ -72,7 +72,7 @@ const Form: FunctionComponent<Props> = ({ onSubmit, children }) => {
           onSubmit: handleSubmit,
         });
       })}
-    </Fragment>
+    </div>
   );
 };
 
