@@ -12,7 +12,7 @@ import useStyles from "./index.styles";
 type Variant = "flat" | "outlined" | "fab" | "clean";
 type Size = "small" | "medium" | "large";
 
-interface Props {
+export interface Props {
   icon?: ReactElement<any>;
   gutterBottom?: boolean;
   noGutter?: boolean;

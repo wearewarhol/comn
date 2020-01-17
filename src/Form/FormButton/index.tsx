@@ -1,18 +1,17 @@
 import React, { FunctionComponent } from "react";
-import Button from "../../Button";
+import Button, { Props as ButtonProps } from "../../Button";
 
-interface Props {
-  isLoading?: boolean;
+interface Props extends ButtonProps {
   onSubmit?: (form: any) => void;
   children: any;
 }
 
 const FormButton: FunctionComponent<Props> = ({
-  isLoading = false,
   onSubmit,
   children,
+  ...props
 }) => (
-  <Button isLoading={isLoading} onClick={onSubmit}>
+  <Button onClick={onSubmit} {...props}>
     {children}
   </Button>
 );
