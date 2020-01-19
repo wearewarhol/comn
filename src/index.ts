@@ -27,6 +27,7 @@ export { default as Grid } from "./Grid";
 export { default as GridItem } from "./GridItem";
 
 export { default as Icon, IconNames } from "./Icon";
+export { default as Image } from "./Image";
 export { default as List } from "./List";
 export { default as ListCard } from "./ListCard";
 export { default as Listing } from "./Listing";

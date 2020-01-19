@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import classnames from "classnames";
 import userMask from "./user-mask.svg";
 import useStyles from "./index.styles";
+import Image from "../Image";
 
 interface Props {
   imageUrl: string;
@@ -25,8 +26,9 @@ const Avatar: FunctionComponent<Props> = ({
       })}
       style={{ backgroundImage: `url(${userMask})` }}
     >
-      <img
+      <Image
         src={imageUrl}
+        height={44}
         alt={alt}
         className={classnames(classes.avatarIcon, {
           [classes.iconSmall]: size === "small",
