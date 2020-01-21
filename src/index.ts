@@ -32,6 +32,9 @@ export { default as List } from "./List";
 export { default as ListCard } from "./ListCard";
 export { default as Listing } from "./Listing";
 export { default as Table } from "./Table";
+export { default as TableCell } from "./Table/TableCell";
+export { default as TableHead } from "./Table/TableHead";
+export { default as TableRow } from "./Table/TableRow";
 export { default as Typography } from "./Typography";
 
 export { Breakpoints } from "./Breakpoints";
