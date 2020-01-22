@@ -1,13 +1,12 @@
 import classnames from "classnames";
-import React, { TableHTMLAttributes, FunctionComponent } from "react";
+import React, { TdHTMLAttributes, FunctionComponent } from "react";
 
 import useStyles from "./index.styles";
 
-type Props = TableHTMLAttributes<Element> & {
+type Props = TdHTMLAttributes<Element> & {
   variant?: "head";
   noPadding?: boolean;
   className?: string;
-  [key: string]: any;
 };
 
 const TableCell: FunctionComponent<Props> = ({

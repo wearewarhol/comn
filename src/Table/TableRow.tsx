@@ -1,10 +1,10 @@
-import React, { TableHTMLAttributes, FunctionComponent } from "react";
+import React, { ThHTMLAttributes, FunctionComponent } from "react";
 
 import useStyles from "./index.styles";
 
-type Props = TableHTMLAttributes<Element> & {};
+type Props = ThHTMLAttributes<Element> & {};
 
-const TableCell: FunctionComponent<Props> = ({ children, ...props }) => {
+const TableRow: FunctionComponent<Props> = ({ children, ...props }) => {
   const classes = useStyles();
 
   return (
@@ -14,4 +14,4 @@ const TableCell: FunctionComponent<Props> = ({ children, ...props }) => {
   );
 };
 
-export default TableCell;
+export default TableRow;
