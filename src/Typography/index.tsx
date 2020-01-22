@@ -26,13 +26,14 @@ type PropComponent =
   | "div"
   | "span";
 
-type Props = {
+export type Props = {
   variant?: PropVariant;
   component?: PropComponent;
   gutterBottom?: boolean | 2 | 4 | 8;
   isInline?: boolean;
   title?: string;
   className?: string;
+  dangerouslySetInnerHTML?: Record<"__html", string>;
 };
 
 const getComponentFromVariant = (
@@ -74,6 +75,7 @@ const Typography: FunctionComponent<Props> = ({
   title,
   className,
   children,
+  ...rest
 }) => {
   const classes = useStyles();
   const Component: PropComponent = getComponentFromVariant(variant, component);
@@ -89,6 +91,7 @@ const Typography: FunctionComponent<Props> = ({
         [classes.isInline]: isInline,
       })}
       title={title}
+      {...rest}
     >
       {children}
     </Component>

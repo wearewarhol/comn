@@ -25,6 +25,7 @@
     "react-dom": "^16.12.0"
   },
   "dependencies": {
+    "@types/showdown": "^1.9.3",
     "chroma-js": "^2.1.0",
     "classnames": "^2.2.6",
     "lottie-web": "^5.6.2",
@@ -33,6 +34,7 @@
     "react-lazyload": "^2.6.5",
     "react-simple-code-editor": "^0.11.0",
     "react-transition-group": "^4.3.0",
+    "showdown": "^1.9.1",
     "walls": "^2.1.0"
   },
   "devDependencies": {
