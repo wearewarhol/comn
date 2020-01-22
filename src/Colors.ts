@@ -3,4 +3,5 @@ export enum State {
   warning = "#ffee58",
   error = "#eb4745",
   update = "#406A8F",
+  debug = "#b700ff",
 }
