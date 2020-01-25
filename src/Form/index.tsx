@@ -42,9 +42,9 @@ const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
   );
 
   const handleKeypress = useCallback(
-    (event: Event) => {
-      if ((event as any).code === "Enter") {
-        handleSubmit();
+    (event: KeyboardEvent) => {
+      if (event.which === 13) {
+        setTimeout(() => handleSubmit(), 100);
       }
     },
     [handleSubmit],
@@ -59,7 +59,7 @@ const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
   }, []);
 
   return (
-    <div className={className}>
+    <form className={className}>
       {React.Children.map(children, (child: any) => {
         if (!child) {
           return null;
@@ -72,7 +72,7 @@ const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
           onSubmit: handleSubmit,
         });
       })}
-    </div>
+    </form>
   );
 };
 
