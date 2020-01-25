@@ -15,13 +15,18 @@ const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
   const [shouldShowErrors, setShouldShowErrors] = useState<boolean>(false);
   const [formState, setFormState] = useState({});
 
-  const handleSubmit = useCallback(() => {
-    setShouldShowErrors(true);
+  const handleSubmit = useCallback(
+    (event?) => {
+      event && event.preventDefault();
 
-    if (!hasErrors) {
-      onSubmit(formState);
-    }
-  }, [formState, setShouldShowErrors, onSubmit, hasErrors]);
+      setShouldShowErrors(true);
+
+      if (!hasErrors) {
+        onSubmit(formState);
+      }
+    },
+    [formState, setShouldShowErrors, onSubmit, hasErrors],
+  );
 
   const handleChangeForField = useCallback(
     (id: string) => {
@@ -44,7 +49,7 @@ const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
   const handleKeypress = useCallback(
     (event: KeyboardEvent) => {
       if (event.which === 13) {
-        setTimeout(() => handleSubmit(), 100);
+        handleSubmit();
       }
     },
     [handleSubmit],
@@ -59,7 +64,7 @@ const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
   }, []);
 
   return (
-    <form className={className}>
+    <form className={className} onSubmit={handleSubmit} method="post">
       {React.Children.map(children, (child: any) => {
         if (!child) {
           return null;
@@ -69,7 +74,6 @@ const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
           shouldShowErrors,
           onBlur:
             child && child.props.id && handleChangeForField(child.props.id),
-          onSubmit: handleSubmit,
         });
       })}
     </form>
