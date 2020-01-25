@@ -20,6 +20,7 @@ const useStyles = makeStyles(() => ({
     textDecoration: "none",
     textTransform: "uppercase",
     marginRight: "1rem",
+    outline: 0,
 
     "&:focus": {
       color: "#fff",
