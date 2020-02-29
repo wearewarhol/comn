@@ -100,6 +100,14 @@ const useStyles = makeStyles(() => ({
     "&::before": {
       background: "transparent",
     },
+
+    "&:hover": {
+      color: buttonColor,
+    },
+
+    "&:focus": {
+      color: buttonColor,
+    },
   },
 
   small: {
