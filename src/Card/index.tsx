@@ -1,6 +1,7 @@
 import classnames from "classnames";
 import React, { StatelessComponent } from "react";
 import useStyles from "./index.styles";
+import FadeIn from "../FadeIn";
 
 type Props = {
   className?: string;
@@ -23,18 +24,20 @@ const Card: StatelessComponent<Props> = ({
   const classes = useStyles();
 
   return (
-    <div
-      className={classnames(classes.root, className, {
-        [classes.noPadding]: noPadding,
-        [classes.isCentered]: isCentered,
-        [classes.isSecondary]: isSecondary,
-        [classes.isSmall]: size === "small",
-        [classes.isWarning]: status === "warning",
-        [classes.isInfo]: status === "info",
-      })}
-    >
-      {children}
-    </div>
+    <FadeIn>
+      <div
+        className={classnames(classes.root, className, {
+          [classes.noPadding]: noPadding,
+          [classes.isCentered]: isCentered,
+          [classes.isSecondary]: isSecondary,
+          [classes.isSmall]: size === "small",
+          [classes.isWarning]: status === "warning",
+          [classes.isInfo]: status === "info",
+        })}
+      >
+        {children}
+      </div>
+    </FadeIn>
   );
 };
 

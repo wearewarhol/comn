@@ -37,6 +37,7 @@ export { default as TableHead } from "./Table/TableHead";
 export { default as TableRow } from "./Table/TableRow";
 export { default as Typography } from "./Typography";
 export { default as Markdown } from "./Markdown";
+export { default as FadeIn } from "./FadeIn";
 
 export { Breakpoints } from "./Breakpoints";
 export { State } from "./Colors";
