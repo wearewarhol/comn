@@ -7,7 +7,7 @@ import useStyles from "./index.styles";
 
 type Props = {
   id: string;
-  label: string;
+  label?: string;
   isDisabled?: boolean;
   className?: string;
   helpText?: string;
@@ -16,6 +16,12 @@ type Props = {
   shouldShowErrors?: boolean;
   onBlur?: (event: any) => void;
   size?: Size;
+  hasInitialEmptyValue?: boolean;
+  classes?: {
+    root?: string;
+    select?: string;
+    icon?: string;
+  };
 };
 
 const Select: FunctionComponent<Props> = ({
@@ -30,6 +36,8 @@ const Select: FunctionComponent<Props> = ({
   children,
   size,
   shouldShowErrors,
+  hasInitialEmptyValue = true,
+  classes: additionalClasses,
 }) => {
   const classes = useStyles();
 
@@ -37,7 +45,10 @@ const Select: FunctionComponent<Props> = ({
     <Field
       id={id}
       label={label}
-      className={className}
+      className={classnames(
+        className,
+        additionalClasses && additionalClasses.root,
+      )}
       size={size}
       helpText={helpText}
       value={value}
@@ -50,20 +61,27 @@ const Select: FunctionComponent<Props> = ({
             id={id}
             disabled={isDisabled}
             onChange={onChange}
-            className={classnames(classes.select, {
-              [classes.hasError]:
-                shouldShowErrors && errors && errors.length > 0,
-            })}
+            className={classnames(
+              classes.select,
+              additionalClasses && additionalClasses.select,
+              {
+                [classes.hasError]:
+                  shouldShowErrors && errors && errors.length > 0,
+              },
+            )}
             value={value}
           >
-            <option></option>
+            {hasInitialEmptyValue && <option></option>}
             {children}
           </select>
 
           <Icon
             icon={IconNames.select}
             size="medium"
-            className={classes.icon}
+            className={classnames(
+              classes.icon,
+              additionalClasses && additionalClasses.icon,
+            )}
           />
         </div>
       )}
