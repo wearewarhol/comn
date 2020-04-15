@@ -63,6 +63,7 @@ const Button: FunctionComponent<Props> = ({
           [classes.large]: size === "large",
           [classes.isLoading]: hasBeenClicked && isLoading,
           [classes.noGutter]: noGutter,
+          [classes.withIcon]: !!icon && !children,
         })}
         onClick={(event) => {
           onClick && onClick(event);

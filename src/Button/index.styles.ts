@@ -58,6 +58,12 @@ const useStyles = makeStyles(() => ({
     },
   },
 
+  withIcon: {
+    "&:focus *, &:hover *": {
+      fill: "var(--color-highlight-dark)",
+    },
+  },
+
   gutterBottom: {
     marginBottom: "1rem",
   },
@@ -72,7 +78,7 @@ const useStyles = makeStyles(() => ({
     display: "inline-block",
     marginBottom: "-0.5rem",
 
-    "&:hover *": {
+    "&:focus *, &:hover *": {
       fill: "var(--color-highlight-dark)",
     },
   },
