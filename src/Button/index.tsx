@@ -79,6 +79,7 @@ const Button: FunctionComponent<Props> = ({
           React.cloneElement(icon, {
             className: classnames(classes.icon, {
               [classes.iconWithChildren]: children,
+              [icon.props.className]: !!icon.props.className,
             }),
           })}
       </button>

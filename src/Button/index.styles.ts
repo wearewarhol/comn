@@ -71,6 +71,10 @@ const useStyles = makeStyles(() => ({
     top: "-0.1rem",
     display: "inline-block",
     marginBottom: "-0.5rem",
+
+    "&:hover *": {
+      fill: "var(--color-highlight-dark)",
+    },
   },
 
   iconWithChildren: {
