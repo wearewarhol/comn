@@ -99,6 +99,15 @@ const useStyles = makeStyles(() => ({
     background: `var(--color-secondary)`,
     border: 0,
     color: "#fff",
+
+    "&:hover, &:focus": {
+      background: buttonColor,
+      borderColor: buttonColor,
+    },
+
+    "&::before": {
+      display: "none",
+    },
   },
 
   clean: {
@@ -117,6 +126,36 @@ const useStyles = makeStyles(() => ({
 
     "&:focus": {
       color: buttonColor,
+    },
+  },
+
+  colorPrimary: {
+    borderColor: "var(--color-highlight-dark)",
+    background: "var(--color-highlight-dark)",
+    color: "#fff",
+
+    "&:hover, &:focus": {
+      background: buttonColor,
+      borderColor: buttonColor,
+    },
+
+    "&::before": {
+      display: "none",
+    },
+  },
+
+  colorSecondary: {
+    borderColor: "var(--color-secondary)",
+    background: "var(--color-secondary)",
+    color: "#fff",
+
+    "&:hover, &:focus": {
+      background: buttonColor,
+      borderColor: buttonColor,
+    },
+
+    "&::before": {
+      display: "none",
     },
   },
 

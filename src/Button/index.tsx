@@ -11,6 +11,7 @@ import useStyles from "./index.styles";
 
 type Variant = "flat" | "outlined" | "fab" | "clean";
 type Size = "small" | "medium" | "large";
+type Color = "primary" | "secondary" | "default";
 
 export interface Props {
   icon?: ReactElement<any>;
@@ -19,6 +20,7 @@ export interface Props {
   inputProps?: any;
   onClick?: (...args: any) => void;
   variant?: Variant;
+  color?: Color;
   size?: Size;
   isLoading?: boolean;
   className?: string;
@@ -33,6 +35,7 @@ const Button: FunctionComponent<Props> = ({
   onClick,
   variant = "outlined",
   size = "medium",
+  color = "default",
   isLoading = false,
   className,
   buttonClassName,
@@ -64,6 +67,8 @@ const Button: FunctionComponent<Props> = ({
           [classes.isLoading]: hasBeenClicked && isLoading,
           [classes.noGutter]: noGutter,
           [classes.withIcon]: !!icon && !children,
+          [classes.colorPrimary]: color === "primary",
+          [classes.colorSecondary]: color === "secondary",
         })}
         onClick={(event) => {
           onClick && onClick(event);
