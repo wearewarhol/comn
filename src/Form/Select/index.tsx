@@ -67,6 +67,7 @@ const Select: FunctionComponent<Props> = ({
               {
                 [classes.hasError]:
                   shouldShowErrors && errors && errors.length > 0,
+                [classes.isDisabled]: isDisabled,
               },
             )}
             value={value}
@@ -81,6 +82,9 @@ const Select: FunctionComponent<Props> = ({
             className={classnames(
               classes.icon,
               additionalClasses && additionalClasses.icon,
+              {
+                [classes.iconIsDisabled]: isDisabled,
+              },
             )}
           />
         </div>
