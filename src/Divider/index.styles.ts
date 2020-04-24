@@ -1,11 +1,10 @@
 import { makeStyles } from "@material-ui/styles";
 
-const color = "var(--color-highlight-darkest)";
 const colorLight = "var(--color-highlight-medium)";
 
 const useStyles = makeStyles(() => ({
   root: {
-    borderTop: `var(--border-width) solid ${color}`,
+    borderTop: `var(--border-width) solid var(--color-highlight-medium)`,
     marginTop: "2rem",
     marginBottom: "2rem",
     borderBottom: 0,
