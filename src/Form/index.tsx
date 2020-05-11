@@ -1,16 +1,23 @@
 import React, {
   useState,
-  FunctionComponent,
   useEffect,
   useCallback,
+  FunctionComponent,
+  HTMLProps,
 } from "react";
 
-interface Props {
+interface Props extends HTMLProps<HTMLFormElement> {
   className?: string;
   onSubmit: (form: any) => void;
 }
 
-const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
+const Form: FunctionComponent<Props> = ({
+  className,
+  onSubmit,
+  children,
+  ref,
+  ...props
+}) => {
   const [hasErrors, setHasErrors] = useState<boolean>(true);
   const [shouldShowErrors, setShouldShowErrors] = useState<boolean>(false);
   const [formState, setFormState] = useState({});
@@ -64,7 +71,13 @@ const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
   }, []);
 
   return (
-    <form className={className} onSubmit={handleSubmit} method="post">
+    <form
+      className={className}
+      onSubmit={handleSubmit}
+      method="post"
+      ref={ref}
+      {...props}
+    >
       {React.Children.map(children, (child: any) => {
         if (!child) {
           return null;
@@ -80,4 +93,6 @@ const Form: FunctionComponent<Props> = ({ className, onSubmit, children }) => {
   );
 };
 
-export default Form;
+export default React.forwardRef<any, Props>((props, ref) => (
+  <Form {...props} ref={ref} />
+));
