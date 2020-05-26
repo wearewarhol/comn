@@ -2,28 +2,15 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "module": "commonjs",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
     "target": "es5",
     "declaration": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "skipLibCheck": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
     "outDir": "./build/"
   },
-  "include": [
-    "src/**/*",
-  ],
-  "exclude": [
-    "node_modules",
-    "build"
-  ]
+  "include": ["src/**/*"]
 }
