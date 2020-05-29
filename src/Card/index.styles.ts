@@ -15,9 +15,7 @@ const useStyles = makeStyles(() => ({
   },
 
   isSecondary: {
-    background: chroma("#fff")
-      .alpha(0.75)
-      .hex(),
+    background: chroma("#fff").alpha(0.75).hex(),
   },
 
   noPadding: {
@@ -33,16 +31,11 @@ const useStyles = makeStyles(() => ({
   },
 
   isWarning: {
-    background: chroma(State.warning)
-      .brighten(2)
-      .hex(),
+    background: chroma(State.warning).brighten(2).hex(),
   },
 
   isInfo: {
-    background: chroma(State.update)
-      .brighten(2)
-      .alpha(0.75)
-      .hex(),
+    background: chroma(State.update).brighten(2).alpha(0.75).hex(),
   },
 
   [Breakpoints.sm]: {
