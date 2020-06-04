@@ -1,15 +1,6 @@
 {
+  "extends": "./node_modules/@warhol/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
-    "module": "commonjs",
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "es5",
-    "declaration": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
     "outDir": "./build/"
   },
   "include": ["src/**/*"]
