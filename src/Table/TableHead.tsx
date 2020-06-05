@@ -1,6 +1,6 @@
 import React, { FunctionComponent, TableHTMLAttributes } from "react";
 
-type Props = TableHTMLAttributes<Element> & {};
+type Props = TableHTMLAttributes<Element>;
 
 const TableHead: FunctionComponent<Props> = ({ children, ...props }) => (
   <thead {...props}>

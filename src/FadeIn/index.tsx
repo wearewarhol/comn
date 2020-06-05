@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState, useEffect } from "react";
 import classnames from "classnames";
 import useStyles from "./index.styles";
 
-const FadeIn: FunctionComponent<{}> = ({ children, ...props }) => {
+const FadeIn: FunctionComponent = ({ children, ...props }) => {
   const classes = useStyles();
   const [isIn, setIsIn] = useState<boolean>(false);
 
