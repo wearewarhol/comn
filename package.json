@@ -14,7 +14,7 @@
     "copy:json": "copyfiles -u 1 './src/**/*.json' build",
     "ts:build": "tsc -p tsconfig.json",
     "start:dev": "yarn ts:build --watch",
-    "build": "yarn copy:css && yarn copy:json && yarn ts:build"
+    "build": "yarn lint && yarn copy:css && yarn copy:json && yarn ts:build"
   },
   "peerDependencies": {
     "@material-ui/styles": "^4.10.0",
