@@ -1,6 +1,6 @@
 {
   "name": "@warhol/comn",
-  "version": "1.11.2",
+  "version": "1.11.3",
   "description": "Commons Library of React Components",
   "main": "build/index.js",
   "types": "build/index.d.ts",
