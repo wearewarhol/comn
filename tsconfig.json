@@ -1,6 +1,7 @@
 {
   "extends": "./node_modules/@warhol/tsconfig/tsconfig.json",
   "compilerOptions": {
+    "noEmit": false,
     "outDir": "./build/"
   },
   "include": ["src/**/*"]
