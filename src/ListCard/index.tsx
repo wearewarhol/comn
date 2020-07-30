@@ -5,7 +5,7 @@ import Divider from "../Divider";
 import Typography from "../Typography";
 
 type Props = {
-  organisation?: any;
+  team?: { teamName: string };
   baseUrl: string;
   id: string;
   name: string;
@@ -16,16 +16,16 @@ type Props = {
 const ListCard: FunctionComponent<Props> = ({
   id,
   name,
-  organisation,
+  team,
   baseUrl,
   actions,
   children,
 }) => (
   <Card>
     <Typography variant="h5" gutterBottom>
-      {organisation && (
+      {team && (
         <Typography variant="body1" component="span" isInline>
-          {organisation.organisationName} /{" "}
+          {team.teamName} /{" "}
         </Typography>
       )}
 
