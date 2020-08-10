@@ -1,6 +1,11 @@
 import { highlight, languages } from "prismjs";
 import "prismjs/components/prism-json";
-import React, { FunctionComponent, useEffect, useState } from "react";
+import React, {
+  ReactElement,
+  FunctionComponent,
+  useEffect,
+  useState,
+} from "react";
 import SimpleCodeEditor from "react-simple-code-editor";
 import classnames from "classnames";
 import useStyles from "./index.styles";
@@ -10,7 +15,8 @@ import { Validators } from "../validators";
 
 type Props = {
   id: string;
-  label?: string;
+  label?: string | ReactElement | ReactElement[];
+  helpText?: string | ReactElement | ReactElement[];
   content: string;
   onBlur?: (_: any, hasError: boolean) => void;
   rows?: number;
@@ -21,6 +27,7 @@ type Props = {
 const Editor: FunctionComponent<Props> = ({
   id,
   label,
+  helpText,
   content,
   onBlur,
   rows = 20,
@@ -38,6 +45,7 @@ const Editor: FunctionComponent<Props> = ({
     <Field
       id={id}
       label={label}
+      helpText={helpText}
       onBlur={onBlur}
       validators={validators}
       shouldShowErrors={shouldShowErrors}

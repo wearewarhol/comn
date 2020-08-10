@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, ReactElement } from "react";
 import classnames from "classnames";
 import Icon, { IconNames } from "../../Icon";
 import Field, { Size } from "../Field";
@@ -7,10 +7,10 @@ import useStyles from "./index.styles";
 
 type Props = {
   id: string;
-  label?: string;
+  label?: string | ReactElement | ReactElement[];
   isDisabled?: boolean;
   className?: string;
-  helpText?: string;
+  helpText?: string | ReactElement | ReactElement[];
   value?: string;
   validators?: Validators[];
   shouldShowErrors?: boolean;

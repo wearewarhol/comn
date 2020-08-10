@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import React, { FunctionComponent } from "react";
+import React, { ReactElement, FunctionComponent } from "react";
 import { Validators } from "../validators";
 import Field, { Size } from "../Field";
 import useStyles from "./index.styles";
@@ -9,12 +9,12 @@ const Element: FunctionComponent<any> = ({ rows, ...props }) =>
 
 interface Props {
   id: string;
-  label: string;
+  label: string | ReactElement | ReactElement[];
   type?: string;
   isDisabled?: boolean;
   value?: string;
   currentValue?: string;
-  helpText?: string;
+  helpText?: string | ReactElement | ReactElement[];
   inputProps?: any;
   validators?: Validators[];
   shouldShowErrors?: boolean;

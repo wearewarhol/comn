@@ -32,7 +32,7 @@ type Props = {
   label?: string | ReactElement | ReactElement[];
   id?: string;
   shouldShowErrors?: boolean;
-  helpText?: string;
+  helpText?: string | ReactElement | ReactElement[];
   validators?: Validators[];
   value?: string;
   hasCheckedState?: boolean;

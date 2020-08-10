@@ -10,7 +10,7 @@ interface Props {
   isDisabled?: boolean;
   value?: string;
   currentValue?: string;
-  helpText?: string;
+  helpText?: string | ReactElement | ReactElement[];
   inputProps?: any;
   validators?: Validators[];
   shouldShowErrors?: boolean;
