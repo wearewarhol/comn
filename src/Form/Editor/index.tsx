@@ -9,9 +9,10 @@ import React, {
 import SimpleCodeEditor from "react-simple-code-editor";
 import classnames from "classnames";
 import useStyles from "./index.styles";
-import "./prism.css";
+import "./prism.js";
 import Field from "../Field";
 import { Validators } from "../validators";
+import useGlobalStyles from "./prism";
 
 type Props = {
   id: string;
@@ -36,6 +37,7 @@ const Editor: FunctionComponent<Props> = ({
 }) => {
   const [currentContent, setCurrentContent] = useState(content);
   const classes = useStyles();
+  useGlobalStyles();
 
   useEffect(() => {
     setCurrentContent(content);
