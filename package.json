@@ -18,7 +18,7 @@
   },
   "peerDependencies": {
     "@material-ui/styles": "^4.10.0",
-    "@types/react": "^16.9.35",
+    "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
@@ -28,9 +28,9 @@
     "@warhol/tsconfig": "2.0.0",
     "chroma-js": "^2.1.0",
     "classnames": "^2.2.6",
-    "lottie-web": "^5.6.10",
-    "prismjs": "^1.20.0",
-    "react-lazyload": "^2.6.7",
+    "lottie-web": "^5.7.3",
+    "prismjs": "^1.21.0",
+    "react-lazyload": "^3.0.0",
     "react-router-dom": "^5.2.0",
     "react-simple-code-editor": "^0.11.0",
     "react-transition-group": "^4.4.1",
@@ -38,10 +38,10 @@
     "walls": "^2.1.0"
   },
   "devDependencies": {
-    "@types/chroma-js": "^2.0.0",
+    "@types/chroma-js": "^2.1.0",
     "@types/classnames": "^2.2.10",
-    "@types/enzyme": "^3.10.5",
-    "@types/jest": "^25.2.3",
+    "@types/enzyme": "^3.10.7",
+    "@types/jest": "^26.0.14",
     "@types/prismjs": "^1.16.1",
     "@types/react-lazyload": "^2.6.0",
     "@types/react-router-dom": "^5.1.5",
@@ -49,13 +49,14 @@
     "@types/showdown": "^1.9.3",
     "copyfiles": "^2.3.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "eslint": "^7.1.0",
-    "jest": "^26.0.1",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "eslint": "^7.10.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.4.2",
     "jest-canvas-mock": "^2.2.0",
     "jest-enzyme": "^7.1.2",
-    "prettier": "^2.0.5",
-    "typescript": "^3.9.5"
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
   },
   "browserslist": [
     ">0.2%",
