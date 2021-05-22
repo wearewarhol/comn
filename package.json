@@ -10,7 +10,7 @@
   "scripts": {
     "prepare": "yarn build",
     "lint": "eslint ./src/ --ext ts,tsx",
-    "copy:css": "copyfiles -u 1 './src/**/*.{css,svg}' build",
+    "copy:css": "copyfiles -u 1 './src/**/*.{css,svg,png}' build",
     "copy:json": "copyfiles -u 1 './src/**/*.json' build",
     "ts:build": "tsc -p tsconfig.json",
     "start:dev": "yarn ts:build --watch",
