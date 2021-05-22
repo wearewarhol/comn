@@ -6,10 +6,11 @@ import { createStyles, makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(
   createStyles({
-    "@global .token.comment, @global .token.prolog, @gblobal .token.doctype, @global .token.cdata": {
-      color: "#999988",
-      fontStyle: "italic",
-    },
+    "@global .token.comment, @global .token.prolog, @gblobal .token.doctype, @global .token.cdata":
+      {
+        color: "#999988",
+        fontStyle: "italic",
+      },
 
     "@global .token.namespace": {
       opacity: 0.7,
@@ -43,17 +44,20 @@ const useStyles = makeStyles(
       color: "#003adb",
     },
 
-    [`@global .token.function, @global .token.deleted, @global .language-autohotkey .token.tag`]: {
-      color: "#9a050f",
-    },
+    [`@global .token.function, @global .token.deleted, @global .language-autohotkey .token.tag`]:
+      {
+        color: "#9a050f",
+      },
 
-    [`@global .token.tag, @global .token.selector, @global .language-autohotkey .token.keyword`]: {
-      color: "#00009f",
-    },
+    [`@global .token.tag, @global .token.selector, @global .language-autohotkey .token.keyword`]:
+      {
+        color: "#00009f",
+      },
 
-    [`@global .token.important, @global .token.function, @global .token.bold`]: {
-      fontWeight: "bold",
-    },
+    [`@global .token.important, @global .token.function, @global .token.bold`]:
+      {
+        fontWeight: "bold",
+      },
 
     [`@global .token.italic`]: {
       fontStyle: "italic",
