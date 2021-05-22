@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import classnames from "classnames";
-import userMask from "./user-mask.svg";
+import userMask from "./user-mask.png";
 import useStyles from "./index.styles";
 import Image from "../Image";
 
