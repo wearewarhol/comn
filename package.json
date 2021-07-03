@@ -29,7 +29,7 @@
     "chroma-js": "^2.1.2",
     "classnames": "^2.3.1",
     "lottie-web": "^5.7.8",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.24.0",
     "react-lazyload": "^3.2.0",
     "react-router-dom": "^5.2.0",
     "react-simple-code-editor": "^0.11.0",
